@@ -1,0 +1,73 @@
+@import 'colors';
+
+.header {
+	background-color: $dark-green;
+	height: 100vh;
+	position: relative;
+	color: $white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	&-inner {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		max-width: 344px;
+		margin: 0 auto 107px;
+		z-index: 2;
+	}
+	.brand-logo {
+		margin-bottom: 13px;
+	}
+	small {
+		padding: 0 22px;
+		opacity: .78;
+	}
+	.button {
+		padding: 16px 18px;
+		margin-top: 24px;
+	}
+	.scroll-down {
+		position: absolute;
+		cursor: pointer;
+		bottom: 40px;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 24px;
+		height: 24px;
+		z-index: 2;
+	}
+	.olives {
+		position: absolute;
+		top: 0;
+		right: 0;
+		min-width: 255px;
+		min-height: 207px;
+		max-width: 500px;
+		max-height: 406px;
+		width: 68vw;
+		height: 55.2vw;
+		z-index: 1;
+	}
+	.spices {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		min-width: 153px;
+		min-height: 189px;
+		max-width: 300px;
+		max-height: 371px;
+		width: 40.8vw;
+		height: 50.4vw;
+		z-index: 1;
+	}
+	.olives,
+	.spices {
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+}

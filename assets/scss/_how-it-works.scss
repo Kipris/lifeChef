@@ -1,0 +1,51 @@
+@import 'colors';
+
+.how-it-works {
+	padding: 28px 0 7px;
+	text-align: center;
+	.step {
+		padding: 40px 32px;
+		margin-bottom: 24px;
+		border-radius: 8px;
+		&.active {
+			position: relative;
+			border: 1px solid $green;
+			box-shadow: 0px 2px 6px rgba(1, 48, 36, 0.07);
+			margin-bottom: 16px;
+			&:before {
+				content: '';
+				position: absolute;
+				top: -9px;
+    		left: 7px;
+				background-image: url('../icons/chef_only.svg');
+				width: 71px;
+				height: 75px;
+			}
+			&:after {
+				content: '';
+				position: absolute;
+				top: 47px;
+    		left: 14px;
+				background-color: $green;
+				width: 60px;
+				height: 1px;
+			}
+		}
+		&-img {
+			margin: 17px 0 12px;
+		}
+		&-title {
+			font-weight: 600;
+			font-size: 16px;
+			line-height: 20px;
+			margin-bottom: 18px;
+		}
+		&-text {
+			font-weight: 300;
+			font-size: 14px;
+			line-height: 20px;
+			letter-spacing: -0.1px;
+			color: $medium-gray;
+		}
+	}
+}

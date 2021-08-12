@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="137" height="94" fill="none">
+  <path fill="#CDF7CA" fill-rule="evenodd" d="M120.873 5.583a7.348 7.348 0 00-9.227-4.78L7.787 33.776a7.348 7.348 0 004.447 14.008l16.64-5.283a3.837 3.837 0 012.322 7.314l-7.71 2.447a7.348 7.348 0 004.446 14.008l7.598-2.412a4.368 4.368 0 012.643 8.326L22.04 77.306a7.348 7.348 0 004.447 14.007L130.346 58.34a7.348 7.348 0 00-4.447-14.008l-16.133 5.122a4.368 4.368 0 01-2.644-8.326l7.336-2.328a7.348 7.348 0 00-4.447-14.008l-8.236 2.615a3.836 3.836 0 11-2.322-7.314l16.64-5.283a7.348 7.348 0 004.78-9.227z" clip-rule="evenodd" opacity=".3"/>
+  <circle cx="45.625" cy="75.25" r="5.5" fill="#99EF9C"/>
+  <circle cx="70.375" cy="75.25" r="5.5" fill="#99EF9C"/>
+  <circle cx="95.125" cy="75.25" r="5.5" fill="#99EF9C"/>
+  <ellipse cx="70.375" cy="33.313" fill="#CDF7CA" rx="19.25" ry="18.563"/>
+  <path stroke="#34A34F" stroke-linecap="round" stroke-width="2.75" d="M59.375 31.25a9.625 9.625 0 0119.25 0"/>
+  <path stroke="#5FD16F" stroke-linecap="round" stroke-width="2.75" d="M63.687 29.826a5.5 5.5 0 013.89-3.889"/>
+  <rect width="2.75" height="4.125" x="67.625" y="17.5" fill="#34A34F" rx="1.375"/>
+  <rect width="30.25" height="2.75" x="53.875" y="34" fill="#34A34F" rx="1.375"/>
+  <rect width="24.75" height="2.75" x="56.625" y="38.125" fill="#34A34F" rx="1.375"/>
+  <circle cx="69" cy="31.25" r="20.625" stroke="#34A34F" stroke-width="2.75"/>
+  <path stroke="#34A34F" stroke-width="2.75" d="M69 51.875V67"/>
+  <circle cx="44.25" cy="73.875" r="6.875" stroke="#34A34F" stroke-width="2.75"/>
+  <circle cx="69" cy="73.875" r="6.875" stroke="#34A34F" stroke-width="2.75"/>
+  <circle cx="93.75" cy="73.875" r="6.875" stroke="#34A34F" stroke-width="2.75"/>
+  <path stroke="#34A34F" stroke-width="2.75" d="M44.25 66.313v0a8.938 8.938 0 018.938-8.938h31.624a8.938 8.938 0 018.938 8.938v0"/>
+</svg>

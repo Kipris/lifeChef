@@ -1,0 +1,55 @@
+@import 'colors';
+
+.ready-to-pick {
+	position: relative;
+	background-color: $dark-green;
+	padding: 80px 0 95px;
+	text-align: center;
+	overflow: hidden;
+	&-inner {
+		position: relative;
+		z-index: 2;
+	}
+	h2 {
+		color: $white;
+		font-size: 24px;
+		max-width: 254px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 24px;
+	}
+	.button {
+		padding: 16px 29px;
+	}
+	.fork {
+		position: absolute;
+		top: 4px;
+		right: 0;
+		min-width: 121px;
+		min-height: 133px;
+		max-width: 237px;
+		max-height: 261px;
+		width: 32.26vw;
+		height: 35.46vw;
+		z-index: 1;
+	}
+	.spices {
+		position: absolute;
+		left: -5px;
+    bottom: -80px;
+		min-width: 153px;
+		min-height: 189px;
+		max-width: 300px;
+		max-height: 371px;
+		width: 40.8vw;
+		height: 50.4vw;
+		z-index: 1;
+	}
+	.fork,
+	.spices {
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+}

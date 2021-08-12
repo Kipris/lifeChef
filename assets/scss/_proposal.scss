@@ -1,0 +1,23 @@
+@import 'colors';
+
+.proposal {
+	padding: 32px 0;
+	text-align: center;
+	.meal-gallery {
+		padding: 0;
+		margin: 0 auto 24px;
+		column-count: 2;
+		column-gap: 8px;
+		max-width: 678px;
+	}
+	.meal {
+		display: inline-block;
+		background: #fff;
+		margin: 0 0 4px;
+		width: 100%;
+		img {
+			max-width: 100%;
+			height: auto;
+		}
+	}
+}

@@ -1,0 +1,21 @@
+@import 'colors';
+
+.footer {
+  background-color: $light-gray;
+	padding: 26px 0;
+  text-align: center;
+  nav {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5px;
+    a {
+      display: inline-block;
+      margin-bottom: 16px;
+    }
+  }
+  span {
+    font-size: 11px;
+    line-height: 16px;
+    color: #BEC1C4;
+  }
+}
