@@ -48,3 +48,43 @@
 		margin-top: 24px;
 	}
 }
+
+@media (min-width: 768px) {
+	.advantages {
+		padding: 30px 0 36px;
+		h2 {
+			font-size: 28px;
+			line-height: 28px;
+			max-width: 290px;
+    	margin: 8px auto 37px;
+		}
+		&-info {
+			display: flex;
+			max-width: 906px;
+			margin: 0 auto;
+		}
+		&-img {
+			img {
+				width: 377px;
+				margin-right: 70px;
+			}
+		}
+		&-description {
+			padding-top: 40px;
+			text-align: left;
+		}
+		ul {
+			margin-top: 26px;
+			margin-bottom: 5px;
+			li {
+				&:before {
+					top: 9px;
+    			left: 3px;
+				}
+			}
+		}
+		.button {
+			margin-top: 21px;
+		}
+	}
+}

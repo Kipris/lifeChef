@@ -8,7 +8,6 @@
 	overflow: hidden;
 	&-inner {
 		position: relative;
-		z-index: 2;
 	}
 	h2 {
 		color: $white;
@@ -35,15 +34,39 @@
 		right: -114px;
 		width: 64.53vw;
     min-width: 242px;
-		// max-width: 237px;
+		max-width: 288px;
 		height: 35.46vw;
 	}
 	.spoon {
-		left: -9px;
-    bottom: -163px;
-		width: 41.86vw;
-		min-width: 157px;
-		// max-width: 510px;
+		left: -114px;
+    bottom: -168px;
+    width: 41.86vw;
+    min-width: 257px;
+    max-width: 322px;
     height: 300px;
 	}
 }
+
+@media (min-width: 768px) {
+	.ready-to-pick {
+		padding: 60px 0 65px;
+	}
+}
+
+@media (min-width: 992px) {
+	.ready-to-pick {
+		h2 {
+			line-height: 28px;
+			max-width: 404px;
+		}
+		.fork {
+			top: -3px;
+			right: -4px;
+		}
+		.spoon {
+			left: 46px;
+    	bottom: -113px;
+		}
+	}
+}
+

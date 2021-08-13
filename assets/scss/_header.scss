@@ -8,6 +8,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	overflow: hidden;
 	&-inner {
 		position: relative;
 		display: flex;
@@ -15,18 +16,23 @@
 		align-items: center;
 		text-align: center;
 		max-width: 344px;
-		margin: 0 auto 107px;
+		margin: 90px auto 0;
 		z-index: 2;
 	}
 	.brand-logo {
 		margin-bottom: 13px;
+		margin-left: 8px;	
 	}
 	small {
 		padding: 0 22px;
 		opacity: .78;
 	}
+	.main-cta {
+		bottom: 0;
+		transition: bottom .2s ease-in;
+	}
 	.button {
-		padding: 16px 14px;
+		padding: 16px 24px;
 		margin-top: 24px;
 	}
 	.scroll-down {
@@ -35,14 +41,27 @@
 		bottom: 40px;
 		left: 50%;
 		transform: translateX(-50%);
-		width: 24px;
-		height: 24px;
-		z-index: 2;
+		z-index: 1;
+		text-align: center;
+		span {
+			position: absolute;
+			white-space: nowrap;
+			font-weight: 400;
+			font-size: 10px;
+			line-height: 15px;
+			opacity: 0.87;
+			top: -15px;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+		img {
+			width: 24px;
+			height: 24px;
+		}
 	}
-	.olives,
-	.spoon,
-	.spices,
-	.coffee {
+	.courses,
+	.cutlery,
+	.spices {
 		position: absolute;
 		z-index: 1;
 		img {
@@ -50,45 +69,71 @@
 			height: auto;
 		}
 	}
-	.olives {
-		top: 0;
-		right: 0;
-		width: 68.8vw;
-		min-width: 258px;
-		// max-width: 656px;
-		height: 212px;
+	.courses {
+		top: -9px;
+    right: -17px;
+    width: 64vw;
+    min-width: 240px;
+    max-width: 426px;
+    height: 212px;
 	}
-	.spoon {
-		left: 0px;
-		bottom: -87px;
-		width: 41.86vw;
-		min-width: 157px;
-		// max-width: 510px;
+	.cutlery {
+		left: -144px;
+    bottom: -112px;
+    width: 79.73vw;
+    min-width: 299px;
+    max-width: 526px;
     height: 300px;
 	}
-	.spices,
-	.coffee {
+	.spices {
 		display: none;
 	}
 }
 
 @media (min-width: 768px) {
 	.header {
+		&-inner {
+			margin-top: -50px;
+			max-width: 410px;
+		}
+		.brand-logo {
+			img {
+				width: 182px;
+				height: 76px;
+			}
+		}
+		h1 {
+			font-size: 60px;
+			line-height: 72px;
+			white-space: nowrap;
+		}
+		small {
+			padding: 0;
+			font-size: 16px;
+			line-height: 20px;
+		}
+		.courses {
+			right: -3px;
+    	top: -7px;
+		}
+		.cutlery {
+			left: -194px;
+    	bottom: -22px;
+		}
 		.spices {
-			left: 0;
+			left: -65px;
 			top: 0;
 			width: 366px;
 			height: 262px;
 		}
-		.coffee {
-			right: 0;
-			bottom: 0;
-			width: 152px;
-			height: 154px;
+		.spices {
+			display: block;
 		}
-		// .spices,
-		// .coffee {
-		// 	display: block;
-		// }
+	}
+}
+
+@media (min-width: 768px) and (min-height: 645px) {
+	.header {
+		height: 645px;
 	}
 }

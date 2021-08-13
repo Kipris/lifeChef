@@ -19,3 +19,25 @@
     color: #BEC1C4;
   }
 }
+
+@media (min-width: 768px) {
+  .footer {
+    &-inner {
+      display: flex;
+      justify-content: space-between;
+    }
+    nav {
+      order: 2;
+      flex-direction: row;
+      a {
+        margin: 0 0 0 24px;
+        text-decoration: none;
+      }
+      a, span {
+        font-size: 11px;
+        line-height: 16px;
+        color: $medium-gray;
+      }
+    }
+  }
+}

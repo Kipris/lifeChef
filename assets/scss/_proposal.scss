@@ -21,3 +21,17 @@
 		}
 	}
 }
+
+@media (min-width: 768px) {
+	.proposal {
+		.meal-gallery {
+			column-count: 3;
+			column-gap: 21px;
+			max-width: 728px;
+			margin: 0 auto 4px;
+		}
+		.meal {
+			margin: 0 0 21px;
+		}
+	}
+}

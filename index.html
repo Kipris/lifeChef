@@ -5,19 +5,33 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>LifeChef’s KETO Meals – over 1000 meal options</title>
+	<!-- Google Analytics -->
+	<script>
+		(function (i, s, o, g, r, a, m) {
+			i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+				(i[r].q = i[r].q || []).push(arguments)
+			}, i[r].l = 1 * new Date(); a = s.createElement(o),
+				m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+		})(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+		ga('create', 'GTM-P5NWMTS', 'auto');
+		ga('send', 'pageview');
+	</script>
+	<!-- End Google Analytics -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="assets/css/index.min.css">
-	<script src="js/index.js"></script>
+	<script defer src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
+	<script src="js/index.min.js"></script>
 </head>
 
 <body>
 	<main>
 
 		<!-- header start -->
-		<header class="header">
+		<section class="header" id="header">
 			<div class="container">
 				<div class="header-inner">
 					<div class="brand-logo">
@@ -26,43 +40,48 @@
 					<h1>Over 900 KETO Meals</h1>
 					<small>Looking for amazing Keto Meals – you’ve come to the right place! LifeChef offers you a selection of
 						almost 1000 combinations of healthy, restaurant quality Keto meals.</small>
-					<a href="#" role="button" id="button" class="button">
-						<span>Explore 900+ KETO Options</span>
-					</a>
+					<div class="main-cta">
+						<a href="https://www.lifechef.com/product-category/meals/?c=c77a6ee845fa" role="button" id="button"
+							class="button">
+							<span>Explore 900+ KETO Options</span>
+						</a>
+					</div>
 				</div>
 			</div>
 			<div role="button" id="scroll-down" class="scroll-down">
+				<span class="hidden-mobile">Scroll down</span>
 				<img src="assets/icons/chevron-down.svg" alt="scroll down" />
 			</div>
-			<div class="olives">
-				<img src="assets/img/olives.png" alt="Olives Decorative">
+			<div class="courses">
+				<img src="assets/img/courses.png" alt="Courses Decorative">
 			</div>
-			<div class="spoon">
-				<img src="assets/img/spoon.png" alt="Spoon Decorative">
+			<div class="cutlery">
+				<img src="assets/img/cutlery.png" alt="Cutlery Decorative">
 			</div>
 			<div class="spices">
 				<img src="assets/img/spices.png" alt="Spices Decorative">
 			</div>
-			<div class="coffee">
-				<img src="assets/img/coffee.png" alt="Coffee Decorative">
-			</div>
-		</header>
+		</section>
 		<!-- header end -->
 
 		<!-- why-choose start -->
-		<section id="why-choose" class="why-choose">
+		<section class="why-choose" id="why-choose">
 			<div class="container">
 				<div class="why-choose-inner">
 					<span class="tag">Our Key Principles</span>
 					<h2>Why choose LifeChef?</h2>
 					<div class="reason-wrap">
 
-						<div class="reason">
-							<div class="reason-img">
-								<img src="assets/img/healthy.svg" alt="Health" />
+						<div class="reason closed">
+							<div class="reason-info">
+								<div class="reason-img">
+									<img src="assets/img/healthy.svg" alt="Health" />
+								</div>
+								<h4 class="reason-title">Health</h4>
+								<p>We have developed a one-of-a-kind delicious and nutritious menu which both you and your body will
+									love!
+								</p>
 							</div>
-							<h4 class="reason-title">Health</h4>
-							<p>One-of-a-kind menu which both you and your body will love!</p>
 							<ul>
 								<li>We start our process by sourcing only the best possible ingredients</li>
 								<li>We make sure not to add any preservatives to the mix.</li>
@@ -70,24 +89,33 @@
 							</ul>
 						</div>
 
-						<div class="reason only-chef">
-							<div class="reason-img">
-								<img src="assets/img/personalization.svg" alt="Personalization" />
+						<div class="reason closed high only-chef">
+							<div class="reason-info">
+								<div class="reason-img">
+									<img src="assets/img/personalization.svg" alt="Personalization" />
+								</div>
+								<h4 class="reason-title">Personalization</h4>
+								<p>We turned to our Doctors and Nutritionists to create a unique health questionnaire, which helps
+									create
+									your LifeChef Personal Menu!</p>
 							</div>
-							<h4 class="reason-title">Personalization</h4>
-							<p>Let LifeChef recommend meals that are unique to your health:</p>
 							<ul>
-								<li>Take 3-5 minutes to answer our nutritionist questionnaire and get a <strong>LifeChef Personal Menu!</strong></li>
-								<li>We grade all the recommended meals with our proprietary “Chef’s Hat” <i class="icon-hat"></i> rating system and identify which meals are best for you.</li>
+								<li>Take 3-5 minutes to answer our nutritionist questionnaire and get a <strong>LifeChef Personal
+										Menu!</strong></li>
+								<li>We grade all the recommended meals with our proprietary “Chef’s Hat” rating system and identify
+									which meals are best for you.</li>
 							</ul>
 						</div>
 
-						<div class="reason only-chef">
-							<div class="reason-img">
-								<img src="assets/img/customization.svg" alt="Customization" />
+						<div class="reason closed only-chef">
+							<div class="reason-info">
+								<div class="reason-img">
+									<img src="assets/img/customization.svg" alt="Customization" />
+								</div>
+								<h4 class="reason-title">Customization</h4>
+								<p>You make your own menu: change any of the meal’s 3 components to create your favorite lunch or dinner
+								</p>
 							</div>
-							<h4 class="reason-title">Customization</h4>
-							<p>Each of our meals is a combination of 3 of our meal “components”:</p>
 							<ul>
 								<li>Pick from proteins, starches, or vegetables in any combination you desire!</li>
 								<li>Choose all proteins or swap for three vegetable-meal to create a great vegetarian dish!</li>
@@ -95,15 +123,20 @@
 							</ul>
 						</div>
 
-						<div class="reason">
-							<div class="reason-img">
-								<img src="assets/img/convenience.svg" alt="Convenience" />
+						<div class="reason closed">
+							<div class="reason-info">
+								<div class="reason-img">
+									<img src="assets/img/convenience.svg" alt="Convenience" />
+								</div>
+								<h4 class="reason-title">Convenience</h4>
+								<p>Configure a plan with 6, 10 or 14 meals and let our team prepare, pack and ship your restaurant
+									quality
+									personalized healthy meals</p>
 							</div>
-							<h4 class="reason-title">Convenience</h4>
-							<p>Enjoy healthy, tasty meals every day</p>
 							<ul>
 								<li>Build up 6, 10, or 14 meals, each from 3 components of your choice.</li>
-								<li>Wait for your meals to arrive in an insulated earth-friendly box with ice packs via LifeChef Delivery Vans or UPS Ground.</li>
+								<li>Wait for your meals to arrive in an insulated earth-friendly box with ice packs via LifeChef
+									Delivery Vans or UPS Ground.</li>
 								<li>Pause your subscription any time and start again when hungry for more amazing LifeChef meals!</li>
 							</ul>
 						</div>
@@ -115,55 +148,66 @@
 		<!-- why-choose end -->
 
 		<!-- customize start -->
-		<section class="customize">
-			<div class="container">
-				<div class="customize-inner">
-					<h2>Customize your meal</h2>
-					<div class="gif"></div>
-				</div>
+		<section class="customize" id="customize">
+			<h2>
+				<div>Customize your meal</div>
+				<div>components</div>
+			</h2>
+			<div class="lazy-image hidden-desktop">
+				<img src="assets/img/mobile-customize.jpg" data-src="assets/gif/mob_customize_your_meal.gif" />
+			</div>
+			<div class="lazy-image hidden-mobile">
+				<img src="assets/img/desktop-customize.jpg" data-src="assets/gif/desktop_customize_your_meal.gif" />
 			</div>
 		</section>
 		<!-- customize end -->
 
 		<!-- proposal start -->
-		<section class="proposal">
+		<section class="proposal" id="proposal">
 			<div class="container">
 				<div class="proposal-inner">
 					<span class="tag">What we propose</span>
-					<h2>Our KETO meals</h2>
+					<h2>Our KETO meal component options</h2>
 					<div class="meal-gallery">
 						<div class="meal">
-							<img src="assets/img/01.png" alt="Meal" />
+							<img src="assets/img/01.jpg" alt="Meal" />
 						</div>
 						<div class="meal">
-							<img src="assets/img/02.png" alt="Meal" />
+							<img src="assets/img/02.jpg" alt="Meal" />
 						</div>
 						<div class="meal">
-							<img src="assets/img/03.png" alt="Meal" />
+							<img src="assets/img/03.jpg" alt="Meal" />
 						</div>
 						<div class="meal">
-							<img src="assets/img/04.png" alt="Meal" />
+							<img src="assets/img/04.jpg" alt="Meal" />
 						</div>
 						<div class="meal">
-							<img src="assets/img/05.png" alt="Meal" />
+							<img src="assets/img/05.jpg" alt="Meal" />
 						</div>
 						<div class="meal">
-							<img src="assets/img/06.png" alt="Meal" />
+							<img src="assets/img/06.jpg" alt="Meal" />
 						</div>
 						<div class="meal">
-							<img src="assets/img/07.png" alt="Meal" />
+							<img src="assets/img/07.jpg" alt="Meal" />
 						</div>
 						<div class="meal">
-							<img src="assets/img/09.png" alt="Meal" />
+							<img src="assets/img/08.jpg" alt="Meal" />
 						</div>
 						<div class="meal">
-							<img src="assets/img/08.png" alt="Meal" />
+							<img src="assets/img/09.jpg" alt="Meal" />
 						</div>
 						<div class="meal">
-							<img src="assets/img/01.png" alt="Meal" />
+							<img src="assets/img/10.jpg" alt="Meal" />
+						</div>
+						<div class="meal">
+							<img src="assets/img/11.jpg" alt="Meal" />
+						</div>
+						<div class="meal">
+							<img src="assets/img/12.jpg" alt="Meal" />
 						</div>
 					</div>
-					<a href="#" role="button" id="button" class="button">
+					<a href="https://www.lifechef.com/product-category/meals/?c=c77a6ee845fa" role="button" id="button"
+						class="button">
 						<span>See All KETO Options</span>
 					</a>
 				</div>
@@ -172,35 +216,43 @@
 		<!-- proposal end -->
 
 		<!-- advantages start -->
-		<section class="advantages">
+		<section class="advantages" id="advantages">
 			<div class="container">
 				<div class="advantages-inner">
 					<span class="tag white">Why are we better</span>
 					<h2>Not all meal plans are created equal</h2>
-					<div class="advantages-img">
-						<img src="assets/img/chef.png" alt="Chef">
+					<div class="advantages-info">
+						<div class="advantages-img">
+							<img src="assets/img/chef.png" alt="Chef">
+						</div>
+						<div class="advantages-description">
+							<p>
+								Our menu was developed by a team of Doctors, Nutritionists, and world class Chefs. We use the best
+								combinations of organic, sustainably raised, high quality ingredients for our meal kits.
+							</p>
+							<p>
+								The meals are made <strong>fresh daily, fully cooked, never frozen</strong>, have no preservatives and
+								are shipped directly to your door.
+							</p>
+							<ul>
+								<li>Simply place them in your refrigerator and heat up when ready for a great lunch or dinner.</li>
+								<li>Heat up the meal components in the microware for 2-3 minutes.</li>
+							</ul>
+							<p>When refrigerated, our meals will stay fresh for up to 7 days – just in time for your next weekly
+								delivery!</p>
+							<a href="https://www.lifechef.com/product-category/meals/?c=c77a6ee845fa" role="button" id="button"
+								class="button">
+								<span>See All KETO Options</span>
+							</a>
+						</div>
 					</div>
-					<p>
-						Our menu was developed by a team of Doctors, Nutritionists, and world class Chefs. We use the best combinations of organic, sustainably raised, high quality ingredients for our meal kits. 
-					</p>
-					<p>
-						The meals are made <strong>fresh daily, fully cooked, never frozen</strong>, have no preservatives and are shipped directly to your door. 
-					</p>
-					<ul>
-						<li>Simply place them in your refrigerator and when ready for a great lunch or dinner.</li>
-						<li>Heat up the meal components in the microware for 2-3 minutes.</li>
-					</ul>
-					<p>When refrigerated, our meals will stay fresh for up to 7 days – just in time for your next weekly delivery!</p>
-					<a href="#" role="button" id="button" class="button">
-						<span>See All KETO Options</span>
-					</a>
 				</div>
 			</div>
 		</section>
 		<!-- advantages end -->
 
 		<!-- how-it-works start -->
-		<section class="how-it-works">
+		<section class="how-it-works" id="how-it-works">
 			<div class="container">
 				<div class="how-it-works-inner">
 					<span class="tag">5 simple steps</span>
@@ -227,7 +279,8 @@
 								<img src="assets/icons/2_icon.svg" alt="Choose Your Meals">
 							</div>
 							<div class="step-title">Choose Your Meals</div>
-							<div class="step-text">Select from thousands of pre-made meals, replace components or create your own  meal.</div>
+							<div class="step-text">Select from thousands of pre-made meals, replace components or create your own
+								meal.</div>
 						</div>
 
 						<div class="step only-chef">
@@ -249,7 +302,8 @@
 								<img src="assets/icons/4_icon.svg" alt="Build Your Meal Plan">
 							</div>
 							<div class="step-title">Build Your Meal Plan</div>
-							<div class="step-text">Add 6, 10 or 14 meals to your weekly plan. You can skip, change or pause at any time.</div>
+							<div class="step-text">Add 6, 10 or 14 meals to your weekly plan. You can skip, change or pause at any
+								time.</div>
 						</div>
 
 						<div class="step">
@@ -271,11 +325,12 @@
 		<!-- how-it-works end -->
 
 		<!-- ready-to-pick start -->
-		<section class="ready-to-pick">
+		<section class="ready-to-pick" id="ready-to-pick">
 			<div class="container">
 				<div class="ready-to-pick-inner">
 					<h2>Ready to pick and customize your meals now?</h2>
-					<a href="#" role="button" id="button" class="button">
+					<a href="https://www.lifechef.com/product-category/meals/?c=c77a6ee845fa" role="button" id="button"
+						class="button">
 						<span>Check All KETO Options</span>
 					</a>
 				</div>
@@ -294,8 +349,8 @@
 			<div class="container">
 				<div class="footer-inner">
 					<nav>
-						<a href="#">Terms and Conditions</a>
-						<a href="#">Privacy Policy</a>
+						<a href="https://www.lifechef.com/terms-conditions/">Terms and Conditions</a>
+						<a href="https://www.lifechef.com/privacy-policy/">Privacy Policy</a>
 					</nav>
 					<span>© LifeChef 2020. All rights reserved.</span>
 				</div>

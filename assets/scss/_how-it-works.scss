@@ -28,3 +28,29 @@
 		}
 	}
 }
+
+@media (min-width: 768px) {
+	.how-it-works {
+		padding: 31px 0 37px;
+		h2 {
+			font-size: 28px;
+			margin-bottom: 25px;
+		}
+		.step-wrap {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			gap: 24px;
+		}
+		.step {
+			padding: 40px 32px 10px;
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	.how-it-works {
+		.step-wrap {
+			grid-template-columns: repeat(5, 1fr);
+		}
+	}
+}
