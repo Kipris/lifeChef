@@ -21,6 +21,11 @@ small {
   font-weight: 400;
 }
 
+html {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
 body {
   font-family: "Sora", sans-serif;
   font-weight: 400;
@@ -46,6 +51,15 @@ a {
   color: #252728;
 }
 
+p {
+  text-align: left;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: -0.1px;
+  font-weight: 300;
+  margin: 0 0 10px;
+}
+
 .button {
   position: relative;
   display: inline-block;
@@ -55,6 +69,7 @@ a {
   padding: 16px 36px;
   overflow: hidden;
   text-decoration: none;
+  transition: box-shadow 0.2s ease-in-out;
 }
 .button span {
   position: relative;
@@ -67,14 +82,17 @@ a {
   content: "";
   position: absolute;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, rgba(34, 137, 59, 0.2) 100%), #34A34F;
-  box-shadow: 0px 10px 6px -3px rgba(0, 0, 0, 0.16), inset 0px 1px 0px #6CC782;
-  transition: opacity 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
   width: 100%;
   height: 100%;
+  border-radius: 32px;
   top: 0;
   left: 0;
   z-index: 1;
   opacity: 0;
+}
+.button:hover {
+  box-shadow: 0px 10px 6px -3px rgba(0, 0, 0, 0.16), inset 0px 1px 0px #6CC782;
 }
 .button:hover:before {
   opacity: 1;
@@ -93,6 +111,37 @@ a {
 }
 .tag.white {
   background-color: #ffffff;
+}
+
+.only-chef {
+  position: relative;
+  border: 1px solid #34A34F !important;
+  box-shadow: 0px 2px 6px rgba(1, 48, 36, 0.07) !important;
+}
+.only-chef:before {
+  content: "";
+  position: absolute;
+  top: -9px;
+  left: 6px;
+  background-image: url("../icons/chef_only.svg");
+  width: 71px;
+  height: 75px;
+}
+.only-chef:after {
+  content: "";
+  position: absolute;
+  top: 47px;
+  left: 13px;
+  background-color: #34A34F;
+  width: 60px;
+  height: 1px;
+}
+
+.icon-hat {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-image: url("../icons/sm-chef-hat.svg");
 }
 
 @media (min-width: 768px) {
@@ -127,7 +176,7 @@ a {
   opacity: 0.78;
 }
 .header .button {
-  padding: 16px 18px;
+  padding: 16px 14px;
   margin-top: 24px;
 }
 .header .scroll-down {
@@ -140,42 +189,59 @@ a {
   height: 24px;
   z-index: 2;
 }
-.header .olives {
+.header .olives,
+.header .spoon,
+.header .spices,
+.header .coffee {
   position: absolute;
-  top: 0;
-  right: 0;
-  min-width: 255px;
-  min-height: 207px;
-  max-width: 500px;
-  max-height: 406px;
-  width: 68vw;
-  height: 55.2vw;
-  z-index: 1;
-}
-.header .spices {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  min-width: 153px;
-  min-height: 189px;
-  max-width: 300px;
-  max-height: 371px;
-  width: 40.8vw;
-  height: 50.4vw;
   z-index: 1;
 }
 .header .olives img,
-.header .spices img {
+.header .spoon img,
+.header .spices img,
+.header .coffee img {
   width: 100%;
   height: auto;
 }
+.header .olives {
+  top: 0;
+  right: 0;
+  width: 68.8vw;
+  min-width: 258px;
+  height: 212px;
+}
+.header .spoon {
+  left: 0px;
+  bottom: -87px;
+  width: 41.86vw;
+  min-width: 157px;
+  height: 300px;
+}
+.header .spices,
+.header .coffee {
+  display: none;
+}
 
+@media (min-width: 768px) {
+  .header .spices {
+    left: 0;
+    top: 0;
+    width: 366px;
+    height: 262px;
+  }
+  .header .coffee {
+    right: 0;
+    bottom: 0;
+    width: 152px;
+    height: 154px;
+  }
+}
 .why-choose {
   padding: 32px 0 8px;
   text-align: center;
 }
 .why-choose .reason {
-  padding: 40px 30px;
+  padding: 40px 23px 38px;
   border: 1px solid rgba(0, 0, 0, 0.07);
   box-shadow: 0px 2px 6px rgba(1, 48, 36, 0.07);
   border-radius: 8px;
@@ -187,6 +253,10 @@ a {
 }
 .why-choose h4 {
   margin: 12px 0 24px;
+}
+.why-choose p {
+  line-height: 20px;
+  margin-bottom: 27px;
 }
 .why-choose ul {
   text-align: left;
@@ -216,20 +286,15 @@ a {
 }
 
 .customize {
-  background-color: #F5F6F7;
-  padding: 63px 0 40px;
+  background-color: #34A34F;
+  padding: 48px 0 40px;
   text-align: center;
 }
 .customize h2 {
-  font-size: 32px;
-  line-height: 36px;
-  letter-spacing: -0.4px;
-  max-width: 300px;
-  margin-left: auto;
-  margin-right: auto;
+  color: #ffffff;
 }
 .customize .gif {
-  height: 400px;
+  height: 237px;
 }
 
 .proposal {
@@ -264,8 +329,7 @@ a {
   margin-bottom: 22px;
 }
 .advantages-img {
-  margin: 0 auto 30px;
-  transform: translateX(-33px);
+  margin: 0 auto 27px;
 }
 .advantages-img img {
   width: 280px;
@@ -313,29 +377,8 @@ a {
   margin-bottom: 24px;
   border-radius: 8px;
 }
-.how-it-works .step.active {
-  position: relative;
-  border: 1px solid #34A34F;
-  box-shadow: 0px 2px 6px rgba(1, 48, 36, 0.07);
+.how-it-works .step.only-chef {
   margin-bottom: 16px;
-}
-.how-it-works .step.active:before {
-  content: "";
-  position: absolute;
-  top: -9px;
-  left: 7px;
-  background-image: url("../icons/chef_only.svg");
-  width: 71px;
-  height: 75px;
-}
-.how-it-works .step.active:after {
-  content: "";
-  position: absolute;
-  top: 47px;
-  left: 14px;
-  background-color: #34A34F;
-  width: 60px;
-  height: 1px;
 }
 .how-it-works .step-img {
   margin: 17px 0 12px;
@@ -376,34 +419,29 @@ a {
 .ready-to-pick .button {
   padding: 16px 29px;
 }
-.ready-to-pick .fork {
+.ready-to-pick .fork,
+.ready-to-pick .spoon {
   position: absolute;
-  top: 4px;
-  right: 0;
-  min-width: 121px;
-  min-height: 133px;
-  max-width: 237px;
-  max-height: 261px;
-  width: 32.26vw;
-  height: 35.46vw;
-  z-index: 1;
-}
-.ready-to-pick .spices {
-  position: absolute;
-  left: -5px;
-  bottom: -80px;
-  min-width: 153px;
-  min-height: 189px;
-  max-width: 300px;
-  max-height: 371px;
-  width: 40.8vw;
-  height: 50.4vw;
   z-index: 1;
 }
 .ready-to-pick .fork img,
-.ready-to-pick .spices img {
+.ready-to-pick .spoon img {
   width: 100%;
   height: auto;
+}
+.ready-to-pick .fork {
+  top: -6px;
+  right: -114px;
+  width: 64.53vw;
+  min-width: 242px;
+  height: 35.46vw;
+}
+.ready-to-pick .spoon {
+  left: -9px;
+  bottom: -163px;
+  width: 41.86vw;
+  min-width: 157px;
+  height: 300px;
 }
 
 .footer {

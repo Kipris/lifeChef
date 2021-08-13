@@ -7,29 +7,8 @@
 		padding: 40px 32px;
 		margin-bottom: 24px;
 		border-radius: 8px;
-		&.active {
-			position: relative;
-			border: 1px solid $green;
-			box-shadow: 0px 2px 6px rgba(1, 48, 36, 0.07);
+		&.only-chef {
 			margin-bottom: 16px;
-			&:before {
-				content: '';
-				position: absolute;
-				top: -9px;
-    		left: 7px;
-				background-image: url('../icons/chef_only.svg');
-				width: 71px;
-				height: 75px;
-			}
-			&:after {
-				content: '';
-				position: absolute;
-				top: 47px;
-    		left: 14px;
-				background-color: $green;
-				width: 60px;
-				height: 1px;
-			}
 		}
 		&-img {
 			margin: 17px 0 12px;

@@ -26,7 +26,7 @@
 		opacity: .78;
 	}
 	.button {
-		padding: 16px 18px;
+		padding: 16px 14px;
 		margin-top: 24px;
 	}
 	.scroll-down {
@@ -39,35 +39,56 @@
 		height: 24px;
 		z-index: 2;
 	}
-	.olives {
-		position: absolute;
-		top: 0;
-		right: 0;
-		min-width: 255px;
-		min-height: 207px;
-		max-width: 500px;
-		max-height: 406px;
-		width: 68vw;
-		height: 55.2vw;
-		z-index: 1;
-	}
-	.spices {
-		position: absolute;
-		left: 0;
-		bottom: 0;
-		min-width: 153px;
-		min-height: 189px;
-		max-width: 300px;
-		max-height: 371px;
-		width: 40.8vw;
-		height: 50.4vw;
-		z-index: 1;
-	}
 	.olives,
-	.spices {
+	.spoon,
+	.spices,
+	.coffee {
+		position: absolute;
+		z-index: 1;
 		img {
 			width: 100%;
 			height: auto;
 		}
+	}
+	.olives {
+		top: 0;
+		right: 0;
+		width: 68.8vw;
+		min-width: 258px;
+		// max-width: 656px;
+		height: 212px;
+	}
+	.spoon {
+		left: 0px;
+		bottom: -87px;
+		width: 41.86vw;
+		min-width: 157px;
+		// max-width: 510px;
+    height: 300px;
+	}
+	.spices,
+	.coffee {
+		display: none;
+	}
+}
+
+@media (min-width: 768px) {
+	.header {
+		.spices {
+			left: 0;
+			top: 0;
+			width: 366px;
+			height: 262px;
+		}
+		.coffee {
+			right: 0;
+			bottom: 0;
+			width: 152px;
+			height: 154px;
+		}
+		// .spices,
+		// .coffee {
+		// 	display: block;
+		// }
 	}
 }
