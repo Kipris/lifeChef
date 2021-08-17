@@ -1,17 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-	// google analytics
-	const cta = document.getElementById('button');
-	cta.addEventListener('click', function () {
-		const source = this.closest('section').id;
-		document.head.append(`<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-			ga('create', 'GTM-P5NWMTS', 'auto');
-			ga('send', '${source} block');</script>`);
-	});
-
 	// scroll down
 	window.__forceSmoothScrollPolyfill__ = true;
 	const btnDown = document.getElementById('scroll-down');
