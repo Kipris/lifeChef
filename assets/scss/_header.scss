@@ -3,6 +3,7 @@
 .header {
 	background-color: $dark-green;
 	height: 100vh;
+	max-height: -webkit-fill-available;
 	position: relative;
 	color: $white;
 	display: flex;
