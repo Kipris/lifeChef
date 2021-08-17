@@ -76,21 +76,6 @@ p {
 	}
 }
 
-.tag {
-	display: inline-block;
-	padding: 8px;
-	border-radius: 4px;
-	background-color: $light-gray;
-	color: $gray;
-	font-size: 10px;
-	line-height: 12px;
-	text-align: center;
-	margin: 0 auto;
-	&.white {
-		background-color: $white;
-	}
-}
-
 .only-chef {
 	position: relative;
 	border: 1px solid $green !important;
@@ -110,8 +95,8 @@ p {
 		top: 47px;
 		left: 13px;
 		background-color: $green;
-		width: 60px;
-		height: 1px;
+		width: 59px;
+		height: 2px;
 	}
 }
 
